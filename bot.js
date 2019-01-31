@@ -172,7 +172,8 @@ client.on("message", async message => {
       .setColor('#642efe')
       .setTimestamp()
      message.channel.sendEmbed(seg).then(function (message) {
-        message.react("540583379834372127")
+        message.react('✅')
+	message.react('❌')
      });
 
   }
