@@ -61,7 +61,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 
 client.on("message", message => {
-     if (message.content === "^help") {
+     if (message.content === "-help") {
          message.react('👌')
          if(!message.channel.guild) return message.reply('** This command only for servers **');
         message.reply("** تم الإرسال في الخاص :heavy_check_mark: **")
@@ -69,30 +69,30 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
- if (message.content === "^help") {
+ if (message.content === "-help") {
   const embed = new Discord.RichEmbed()
       .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
 ــــــــــــــــــــــــــــــــــــــــــــــــــ
-                  Prefix = ' ^ '
+                  Prefix = ' - '
 ــــــــــــــــــــــــــــــــــــــــــــــــــ
 
 
                 ❖ اوامر عامة ❖  
 
-❖ ^notes ➾ مـلاحظات يجب قرائتـها
-❖ ^bc ➾ إرسال رسالة للجميع
-❖ ^members ➾ معلومات الاعضاء
-❖ ^avatar ➾ شعار حسابك
-❖ ^bot ➾ معلومات البوت
-❖ ^clear ➾ مسـح الشـات
-❖ ^ping ➾ معـرفة سرعـة البـوت
-❖ ^server ➾ معلومات السيرفر
-❖ ^new (Subject) ➾ لفتح تـذكـرة
-❖ ^close ➾ لإغـلاق تـذكـرة
-❖ ^roles ➾ لإظهار رتب سيرفرك
+❖ -notes ➾ مـلاحظات يجب قرائتـها
+❖ -bc ➾ إرسال رسالة للجميع
+❖ -members ➾ معلومات الاعضاء
+❖ -avatar ➾ شعار حسابك
+❖ -bot ➾ معلومات البوت
+❖ -clear ➾ مسـح الشـات
+❖ -ping ➾ معـرفة سرعـة البـوت
+❖ -server ➾ معلومات السيرفر
+❖ -new (Subject) ➾ لفتح تـذكـرة
+❖ -close ➾ لإغـلاق تـذكـرة
+❖ -roles ➾ لإظهار رتب سيرفرك
 
 
 **
@@ -109,7 +109,7 @@ message.author.sendEmbed(embed)
 
 
 client.on("message", message => {
- if (message.content === "^notes") {
+ if (message.content === "-notes") {
   const embed = new Discord.RichEmbed()
       .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
@@ -118,7 +118,7 @@ client.on("message", message => {
              مـلاحــظــة
 
 
-أمر التذكره لها قوانين يرجى كتابة       ^ticket
+أمر التذكره لها قوانين يرجى كتابة       -ticket
 
 
     اذا اردت ان يعطى لأي شخص رتبة عندما يدخل الى السيرفر يجب ان يكون اسم الرتبة Members
@@ -142,7 +142,7 @@ message.author.sendEmbed(embed)
 
 
 client.on('message', message => { 
-    var prefix = "^";
+    var prefix = "-";
     if (message.author.boss) return;
     if (!message.content.startsWith(prefix)) return;
     let command = message.content.split(" ")[0];
@@ -174,7 +174,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   const port = '25565'
-  if(message.content.startsWith('^mcstats')) {
+  if(message.content.startsWith('-mcstats')) {
  const args = message.content.split(" ").slice(1).join(" ")
     if (!args) return message.channel.send("** Write Server IP . **");
         let embed = new Discord.RichEmbed()
@@ -192,7 +192,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content === '^roles') {
+    if (message.content === '-roles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
@@ -228,7 +228,7 @@ client.on("message", async message => {
 
 
 client.on("message", message => {
- if (message.content === "^invite") {
+ if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
@@ -261,7 +261,7 @@ message.author.sendEmbed(embed)
 
 client.on('message', message => {
    if(!message.channel.guild) return;
-if(message.content.startsWith('^bc')) {
+if(message.content.startsWith('-bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send(':no_entry: | You dont have **ADMINISTRATOR** Permission!' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -386,7 +386,7 @@ client.on('message' , message => {
 
 
 client.on('message', message => {
-    if (message.content == '^server') {
+    if (message.content == '-server') {
         var servername = message.guild.name
         var اونر = message.guild.owner
         var اعضاء = message.guild.memberCount
@@ -489,7 +489,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('message', message => {
-    var prefix = "^";         //<=== هنا تقدر تغير البريفكس
+    var prefix = "-";         //<=== هنا تقدر تغير البريفكس
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {            //Codes Development .
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));         //Codes Development .
@@ -533,7 +533,7 @@ msg.delete();
 
 
 client.on('message', message => {
-    if (message.content.startsWith("^avatar")) {
+    if (message.content.startsWith("-avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -551,7 +551,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-     if (message.content === "^bot") {
+     if (message.content === "-bot") {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -568,7 +568,7 @@ message.channel.sendEmbed(embed);
 
 
 client.on('message', message => {
-    if(message.content == '^members') {
+    if(message.content == '-members') {
        message.react(":white_check_mark:")
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info🔋
@@ -712,7 +712,7 @@ message.channel.sendMessage("" + "هايي");
 
 
 client.on('message', message => {
-     if (message.content === "^invite") {
+     if (message.content === "-invite") {
 message.channel.sendMessage(":heart_exclamation:  تم الإرسال فـ الخاًص");
     }
 }); 
@@ -742,7 +742,7 @@ message.channel.sendMessage("" + "وعليكم السلام");
 
 
 client.on('message', message => {
-	 if (message.content === "^ping") {
+	 if (message.content === "-ping") {
 	  const embed = new Discord.RichEmbed ()
   
   .setColor("#642efe")
@@ -756,7 +756,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-	 if (message.content === "^ticket") {
+	 if (message.content === "-ticket") {
 	  const embed = new Discord.RichEmbed ()
   
   .setColor("#642efe")
