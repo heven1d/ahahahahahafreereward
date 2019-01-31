@@ -7,7 +7,6 @@ var prefix = "-";
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`-help | FreeReward.`) //    ,"http://twitch.tv/S-F"
-client.channels.get("539927972270833695").join(); 
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
