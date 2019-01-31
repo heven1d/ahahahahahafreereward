@@ -168,12 +168,12 @@ client.on("message", async message => {
       message.delete();
       var seg = new Discord.RichEmbed()
       .setAuthor(message.author.username, message.author.avatarURL)
-      .setDescription('`' + message + '`')
-      .setColor('#00cccc')
+      .setDescription('```' + message + '```')
+      .setColor('#642efe')
       .setTimestamp()
      message.channel.sendEmbed(seg).then(function (message) {
-        message.react("505414189855277066")
-        message.react("505414170406158359")
+        message.react("540580008410742794")
+        message.react("540580062110679064")
      });
 
   }
