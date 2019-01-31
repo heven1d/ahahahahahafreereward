@@ -593,7 +593,7 @@ client.on('message', message => {
             return message.channel.send('Please type a subject for the ticket.');
         };
                 if(!support) {
-                    return message.channel.send('**Please make sure that `Support` role exists and it\'s not duplicated.**');
+                    return message.channel.send('**Please make sure that `◆ Support` role exists and it\'s not duplicated.**');
                 };
             if(!ticketsStation) {
                 message.guild.createChannel("TICKETS", "category");
