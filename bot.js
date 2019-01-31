@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const devs = ["460606140666085378" , "284005623895425024"];
 const adminprefix = ["-"];
-var prefix = "^";  
+var prefix = "-";  
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -72,7 +72,7 @@ client.on("message", message => {
 client.on("message", message => {
  if (message.content === "^help") {
   const embed = new Discord.RichEmbed()
-      .setColor("#ff0000")
+      .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
@@ -112,7 +112,7 @@ message.author.sendEmbed(embed)
 client.on("message", message => {
  if (message.content === "^notes") {
   const embed = new Discord.RichEmbed()
-      .setColor("#ff0000")
+      .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
@@ -179,7 +179,7 @@ client.on('message', message => {
  const args = message.content.split(" ").slice(1).join(" ")
     if (!args) return message.channel.send("** Write Server IP . **");
         let embed = new Discord.RichEmbed()
-        .setColor('#ff0000')
+        .setColor('#642efe')
         .setThumbnail(`https://api.minetools.eu/favicon/${args}/25565`)
         .addField("📜 Server NIP",`${args}`,true)
         .addField("🌐 Server Port",`${port}`)
@@ -231,7 +231,7 @@ client.on("message", async message => {
 client.on("message", message => {
  if (message.content === "^invite") {
   const embed = new Discord.RichEmbed()
-      .setColor("#ff0000")
+      .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
@@ -286,7 +286,7 @@ message.channel.send(`:ballot_box_with_check: تم ارسال الرساله ب�
 message.guild.members.forEach(m => {
 var bc = new
 Discord.RichEmbed()
-.setColor('#FF0000')
+.setColor('#642efe')
   .setTitle('`-Broadcast-`')
 .setAuthor(`Server : ${message.guild.name}`)
 .setFooter(`Sender : ${message.author.username}`)
@@ -468,7 +468,7 @@ client.on('guildMemberAdd', member => {
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
-        .setColor('#FF0000')
+        .setColor('#642efe')
         .setThumbnail(memberavatar)
         .addField(':running_shirt_with_sash: | name :  ',`${member}`)
         .addField(':loudspeaker: | اطلق من دخل' , `Welcome to the server, ${member}`)
@@ -544,7 +544,7 @@ client.on('message', message => {
 
       }
         const embed = new Discord.RichEmbed()
-        .setColor("#FF0000")
+        .setColor("#642efe")
         .setImage(`${x5bzm.avatarURL}`)
       message.channel.sendEmbed(embed);
     }
@@ -618,7 +618,7 @@ client.on('message', message => {
                                 });
                     let embed = new Discord.RichEmbed()
                                 .setTitle('**New Ticket.**')
-                                .setColor("#FF0000")
+                                .setColor("#642efe")
                                 .setThumbnail(`${message.author.avatarURL}`)
                                 .addField('Subject', args)
                                 .addField('Author', message.author)
@@ -634,7 +634,7 @@ client.on('message', message => {
         };  
                 let embed = new Discord.RichEmbed()
                     .setAuthor("Do you really want to close this ticket? Repeat the command to make sure. You have 20 seconds.")
-                    .setColor("#FF0000");
+                    .setColor("#642efe");
                     message.channel.sendEmbed(embed) .then(codes => {
 
                     
@@ -674,7 +674,7 @@ client.on('message', message => {
       message.author.sendMessage(invite.url)
     )
     const embed = new Discord.RichEmbed()
-        .setColor("#FF0000")
+        .setColor("#642efe")
           .setDescription(" تم أرسال الرابط برسالة خاصة ")
            .setAuthor(client.user.username, client.user.avatarURL)
                  .setAuthor(client.user.username, client.user.avatarURL)
@@ -682,7 +682,7 @@ client.on('message', message => {
 
       message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
               const Embed11 = new Discord.RichEmbed()
-        .setColor("#FF0000")
+        .setColor("#642efe")
 
     .setDescription(" مدة الرابط : يوم | عدد استخدامات الرابط : 20 ")
       message.author.sendEmbed(Embed11)
@@ -746,7 +746,7 @@ client.on('message', message => {
 	 if (message.content === "^ping") {
 	  const embed = new Discord.RichEmbed ()
   
-  .setColor("#FF0000")
+  .setColor("#642efe")
   .addField('``سرعة إتصال الـبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
 
   message.channel.sendEmbed(embed);
@@ -760,7 +760,7 @@ client.on('message', message => {
 	 if (message.content === "^ticket") {
 	  const embed = new Discord.RichEmbed ()
   
-  .setColor("#FF0000")
+  .setColor("#642efe")
   .setDescription(`
  **
                           (1)
