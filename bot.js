@@ -82,7 +82,6 @@ client.on("message", message => {
 
                 ❖ اوامر عامة ❖  
 
-❖ -notes ➾ مـلاحظات يجب قرائتـها
 ❖ -bc ➾ إرسال رسالة للجميع
 ❖ -members ➾ معلومات الاعضاء
 ❖ -avatar ➾ شعار حسابك
@@ -109,7 +108,7 @@ message.author.sendEmbed(embed)
 
 
 client.on("message", message => {
- if (message.content === "-notes") {
+ if (message.content === "-notwdwdwdwdwdwdsqxqdes") {
   const embed = new Discord.RichEmbed()
       .setColor("#642efe")
       .setThumbnail(message.author.avatarURL)
@@ -438,7 +437,7 @@ client.on('message', async message => {
 
 
 client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', 'Members'));
+member.addRole(member.guild.roles.find('name', '◆ Member'));
 });
 
 
