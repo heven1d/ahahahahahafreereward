@@ -27,6 +27,10 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   const serverQueue = queue.get(oldMember.guild.id);
 
 
+  
+client.user.setGame(`^play | MAK Music`) //    ,"http://twitch.tv/S-F" 
+  
+ 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
       // User joines a voice channel
   } else if(newUserChannel === undefined){
