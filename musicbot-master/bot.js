@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const { Client, Util} = require('discord.js');
 const config = require("./config.json");
+const developers = ["460606140666085378"]
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 
