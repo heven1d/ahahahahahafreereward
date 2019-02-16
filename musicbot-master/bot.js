@@ -1,4 +1,159 @@
 const Discord = require('discord.js');
+const client = new Discord.Client();
+const devs = ["460606140666085378"];
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+//client.user.setGame(`with sexy girls`)
+  console.log('')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online ')
+  console.log('╚[════════════]╝')
+  console.log('')
+  console.log('')
+});
+
+
+client.on("message", message => {
+     if (message.content === "test") {
+         message.react('542435654580043776')
+		 message.react('542436955724447781')
+		 message.react('542436919594713127')
+		 message.react('542436937102000131')
+         if(!message.channel.guild) return message.reply('** This command only for servers **');
+     //   message.reply("** تم الإرسال في الخاص :heavy_check_mark: **")
+     }
+});
+	
+
+
+
+client.on("message", message => {
+ if (message.content === "h") {
+  const embed = new Discord.RichEmbed()
+      .setColor("#ff0000")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+ **
+ــــــــــــــــــــــــــــــــــــــــــــــــــ
+                  Prefix = ' ^ '
+ــــــــــــــــــــــــــــــــــــــــــــــــــ
+
+
+                ❖ اوامر عامة ❖  
+
+❖ ^notes ➾ مـلاحظات يجب قرائتـها
+❖ ^bc ➾ إرسال رسالة للجميع
+❖ ^members ➾ معلومات الاعضاء
+❖ ^avatar ➾ شعار حسابك
+❖ ^bot ➾ معلومات البوت
+❖ ^clear ➾ مسـح الشـات
+❖ ^ping ➾ معـرفة سرعـة البـوت
+❖ ^server ➾ معلومات السيرفر
+❖ ^new (Subject) ➾ لفتح تـذكـرة
+❖ ^close ➾ لإغـلاق تـذكـرة
+❖ ^roles ➾ لإظهار رتب سيرفرك
+❖ ^role ➾ لإعطـاء شخص رتبة
+
+
+
+
+ــــــــــــــــــــــــــــــــــــــــــــــــــ
+               ❖ Music Commands ❖ 
+ــــــــــــــــــــــــــــــــــــــــــــــــــ
+**
+`)
+      .addField("play [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist.", false)
+      .addField("play [Suchbegriff(e)]", "Usage: `^play`<song name> Description: To play Music.", false)
+      .addField("skip", "Usage: `^skip` Description: To skip music.", false)
+      .addField("stop", "Usage: `^stop` Description: To Bot disconnected.", false)
+      .addField("song", "Usage: `^song` Description: To Check The Current playing song.", false)
+      .addField("queue", "Usage: `^queue` Description: To Check The Queue List.", false)
+      .addField("volume", "Usage: `^volume` Description: To See Volume.", false)
+      .addField("volume [Wert]", "Usage: `^volume` Description: To Changes the volume level to the specified value.", false)
+      .addField("pause", "Usage: `^pause` Description: To pause The Current Playing Song.", false)
+      .addField("resume", "Usage: `^resume` Description: To Resume The Paused Song.", false)
+      .addField("mute", "Usage: `^mute` Description: To mute Bot.", false)
+      .addField("unmute", "Usage: `^unmute` Description: To unmute Bot.", false)
+
+message.author.sendEmbed(embed)
+
+}
+});
+
+
+
+
+
+	
+		
+client.on("message", message => {
+ if (message.content === "hm") {
+  const embed = new Discord.RichEmbed()
+      .setTitle(`Netflix Music Commands`)
+     // .setThumbnail(message.author.avatarURL)
+	 // .setTitle(`Netflix Music Commands`)
+      .addField("play [YouTube Link/Playlist]", "Usage: `^play` Description: To play See The YouTube Linke And playlist.", false)
+      .addField("play [Suchbegriff(e)]", "Usage: `^play`<song name> Description: To play Music.", false)
+      .addField("skip", "Usage: `^skip` Description: To skip music.", false)
+      .addField("stop", "Usage: `^stop` Description: To Bot disconnected.", false)
+      .addField("song", "Usage: `^song` Description: To Check The Current playing song.", false)
+      .addField("queue", "Usage: `^queue` Description: To Check The Queue List.", false)
+      .addField("volume", "Usage: `^volume` Description: To See Volume.", false)
+      .addField("volume [Wert]", "Usage: `^volume` Description: To Changes the volume level to the specified value.", false)
+      .addField("pause", "Usage: `^pause` Description: To pause The Current Playing Song.", false)
+      .addField("resume", "Usage: `^resume` Description: To Resume The Paused Song.", false)
+      .addField("mute", "Usage: `^mute` Description: To mute Bot.", false)
+      .addField("unmute", "Usage: `^unmute` Description: To unmute Bot.", false)
+	  .setColor("#ff0000")
+
+
+message.author.sendEmbed(embed)
+
+}
+});
+
+		
+		
+		
+		
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === "email") {
+function randomem() {
+let email = '';
+const ReBeL = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._"\'';
+for (let i = 0; i < 5; i++) email += ReBeL.charAt(Math.floor(Math.random() * ReBeL.length));
+return email;
+}
+function randompass() {
+let pass = '';
+const CoDeS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!?@#$%&()-_"\'';
+for (let i = 0; i < 8; i++) pass += CoDeS.charAt(Math.floor(Math.random() * CoDeS.length));
+return pass;
+}
+const random1 = randomem();
+const random2 = randompass();
+message.author.send(`------------------------
+email : **${random1}@gmail.com**
+password : **${random2}**
+------------------------`).catch(err => {
+   if(err == "DiscordAPIError: Cannot send messages to this user") {
+      return message.channel.send("**للأسف , لديك اعدادات خصوصية لاتسمح لي بأرسال رسائل خاصة لك **");
+}
+});
+
+message.channel.send("**تم الارسال الحساب في الخاص | ☑ **")
+}});
+	
+
+	
+	
+	
+	
+const Discord = require('discord.js');
 const { Client, Util} = require('discord.js');
 const config = require("./config.json");
 const YouTube = require('simple-youtube-api');
@@ -123,20 +278,20 @@ client.on('message', async msg => { // eslint-disable-line
         if(!voiceChannel){
             var embedplay1 = new Discord.RichEmbed()
                 .setTitle(`Please Connect To A Voice Channel To Play Something!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedplay1);
         }
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         if(!permissions.has('CONNECT')){
             var embedplay2 = new Discord.RichEmbed()
                 .setTitle(`I lack the right CONNECT to connect in these Voice Channel!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedplay2);
         }
         if (!permissions.has('SPEAK')){
             var embedplay3 = new Discord.RichEmbed()
                 .setTitle(`I do not have the right to SPEAK to connect in these Voice Channel!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedplay3);
         }
         
@@ -151,7 +306,7 @@ client.on('message', async msg => { // eslint-disable-line
             }
             var embedplay4 = new Discord.RichEmbed()
                 .setTitle(`Playlist: ${playlist.title} queued!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedplay4);
         }else{
             try{
@@ -166,7 +321,7 @@ client.on('message', async msg => { // eslint-disable-line
 ${videos.map(video2 => `${++index}- ${video2.title}`).join('\n')}
 
 Please enter a number between 1-10 on,a Song select!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
                     msg.channel.sendEmbed(embedqueue5);
                     
                     try{
@@ -179,7 +334,7 @@ Please enter a number between 1-10 on,a Song select!`)
                         console.error(err);
                         var embedplay6 = new Discord.RichEmbed()
                             .setTitle(`no or invalid number was entered. Demolition of the song selection!`)
-                            .setColor(['#ff0000'])
+                            .setColor('#ff0000')
                         return msg.channel.sendEmbed(embedplay6);
                     }
                     const videoIndex = parseInt(response.first().content);
@@ -188,7 +343,7 @@ Please enter a number between 1-10 on,a Song select!`)
                     console.error(err);
                     var embedplay7 = new Discord.RichEmbed()
                         .setTitle(`I could find no video!`)
-                        .setColor(['#ff0000'])
+                        .setColor('#ff0000')
                     return msg.channel.sendEmbed(embedplay7);
                 }
             }
@@ -199,19 +354,19 @@ Please enter a number between 1-10 on,a Song select!`)
         if(!msg.member.voiceChannel){
            var embedskip1 = new Discord.RichEmbed()
                 .setTitle(`You are in not in the Voice Channel!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedskip1); 
         }
         if(!serverQueue){
             var embedskip2 = new Discord.RichEmbed()
                 .setTitle(`There is nothing to Skip!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedskip2);
         }
         serverQueue.connection.dispatcher.end('Skip command has been used!');
         var embedskip3 = new Discord.RichEmbed()
             .setTitle(`⏩Skipped👍`)
-            .setColor(['#ff0000'])
+            .setColor('#ff0000')
         return msg.channel.sendEmbed(embedskip3);
     }   
         
@@ -219,27 +374,27 @@ Please enter a number between 1-10 on,a Song select!`)
         if(!msg.member.voiceChannel){
            var embedstop1 = new Discord.RichEmbed()
                 .setTitle(`you're not in the voice channel!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedstop1); 
         }
         if(!serverQueue){
             var embedstop2 = new Discord.RichEmbed()
                 .setTitle(`There is nothing to stop!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedstop2);
         }
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end('Stop command has been used!');
         var embedstop3 = new Discord.RichEmbed()
             .setTitle(`⏩Skipped👍`)
-            .setColor(['#ff0000'])
+            .setColor('#ff0000')
         return msg.channel.sendEmbed(embedstop3);
     }
     else if(msg.content.startsWith(`${PREFIX}song`)){
         if(!serverQueue){
             var embedsong1 = new Discord.RichEmbed()
                 .setTitle(`It does nothing at the moment!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedsong1);
                  }
             var embedsong2 = new Discord.RichEmbed()
@@ -250,19 +405,19 @@ Von: ${serverQueue.songs[0].channel}
 Dauer: ${serverQueue.songs[0].duration}
 Link: ${serverQueue.songs[0].url}
 `)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedsong2); 
     }
     else if(msg.content.startsWith(`${PREFIX}volume`)){
         if(!serverQueue){
             var embedvolume1 = new Discord.RichEmbed()
                 .setTitle(`It does nothing at the moment!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedvolume1);}
         if(!args[1]){
              var embedvolume2 = new Discord.RichEmbed()
                 .setTitle(`The current volume is: ${serverQueue.volume}`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedvolume2);
         }
         
@@ -272,12 +427,12 @@ Link: ${serverQueue.songs[0].url}
         serverQueue.mute = false;
         var embedvolume3 = new Discord.RichEmbed()
                 .setTitle(`The volume is on ${args[1]} set`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedvolume3);
         } else{
             var embedvolume4 = new Discord.RichEmbed()
                 .setTitle(`Please enter a number >0 on!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedvolume4);
         }
     }
@@ -285,7 +440,7 @@ Link: ${serverQueue.songs[0].url}
         if(!serverQueue){
             var embedqueue1 = new Discord.RichEmbed()
                 .setTitle(`It does nothing at the moment!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedqueue1);
         }
         var embedqueue2 = new Discord.RichEmbed()
@@ -294,7 +449,7 @@ Link: ${serverQueue.songs[0].url}
 ${serverQueue.songs.map(song => `- ${song.title}`).join('\n')}
 
 Playing: ${serverQueue.songs[0].title}`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedqueue2);
     }
     else if(msg.content.startsWith(`${PREFIX}pause`)){
@@ -303,12 +458,12 @@ Playing: ${serverQueue.songs[0].title}`)
         serverQueue.connection.dispatcher.pause();
         var embedpause1 = new Discord.RichEmbed()
                 .setTitle(`The song is stopped!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedpause1);
         }
         var embedpause2 = new Discord.RichEmbed()
             .setTitle(`It does nothing at the moment!`)
-            .setColor(['#ff0000'])
+            .setColor('#ff0000')
         return msg.channel.sendEmbed(embedpause2);
     }
     else if(msg.content.startsWith(`${PREFIX}resume`)){
@@ -317,25 +472,25 @@ Playing: ${serverQueue.songs[0].title}`)
         serverQueue.connection.dispatcher.resume();
         var embedresume1 = new Discord.RichEmbed()
                 .setTitle(`The song keeps playing on!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedresume1);           
         }
         var embedresume2 = new Discord.RichEmbed()
             .setTitle(`It does nothing at the moment!`)
-            .setColor(['#ff0000'])
+            .setColor('#ff0000')
         return msg.channel.sendEmbed(embedresume2);
     }   
     else if(msg.content.startsWith(`${PREFIX}mute`)){
         if(!serverQueue){
         var embedmute1 = new Discord.RichEmbed()
                 .setTitle(`It does nothing at the moment!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedmute1);     
         }
         if(serverQueue.mute){
         var embedmute2 = new Discord.RichEmbed()
                 .setTitle(`The music Bot is already muted!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedmute2);     
         }
         else{
@@ -343,7 +498,7 @@ Playing: ${serverQueue.songs[0].title}`)
             serverQueue.connection.dispatcher.setVolume(0 / 2000);
             var embedmute3 = new Discord.RichEmbed()
                 .setTitle(`The music Bot was muted!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedmute3);
         }
     }
@@ -351,13 +506,13 @@ Playing: ${serverQueue.songs[0].title}`)
         if(!serverQueue){
             var embedunmute1 = new Discord.RichEmbed()
                 .setTitle(`It does nothing at the moment!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedunmute1);     
         }
         if(!serverQueue.mute){
             var embedunmute2 = new Discord.RichEmbed()
                 .setTitle(`The Music Bot is already unmuted!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedunmute2);     
         }   
         else{
@@ -365,7 +520,7 @@ Playing: ${serverQueue.songs[0].title}`)
             serverQueue.connection.dispatcher.setVolume(serverQueue.volume / 2000);
             var embedunmute3 = new Discord.RichEmbed()
                 .setTitle(`The Music Bot has been unmuted!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
         return msg.channel.sendEmbed(embedunmute3);
         }
     }
@@ -384,7 +539,7 @@ Playing: ${serverQueue.songs[0].title}`)
             .addField("resume", "Usage: `!!resume` Description: To Resume The Paused Song.", false)
             .addField("mute", "Usage: `!!mute` Description: To mute Bot.", false)
             .addField("unmute", "Usage: `!!unmute` Description: To unmute Bot.", false)
-            .setColor(['#ff0000'])
+            .setColor('#ff0000')
             .setThumbnail(client.user.avatarURL)
             return msg.channel.sendEmbed(embedhelp);
     }
@@ -455,7 +610,7 @@ async function handleVideo(video, msg, voiceChannel, playlist=false){
             queue.delete(msg.guild.id);
             var embedfunc1 = new Discord.RichEmbed()
                 .setTitle(`Bot could not VoiceChannel the join!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedfunc1);
         }
     } else {
@@ -465,7 +620,7 @@ async function handleVideo(video, msg, voiceChannel, playlist=false){
         else{
             var embedfunc2 = new Discord.RichEmbed()
                 .setTitle(`${song.title} queued!`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return msg.channel.sendEmbed(embedfunc2);
         }
     }    
@@ -497,7 +652,7 @@ function play(guild, song){
     
     var messagefunction1 = new Discord.RichEmbed()
                 .setTitle(`Playing 🎶 ${song.title} -now`)
-                .setColor(['#ff0000'])
+                .setColor('#ff0000')
             return serverQueue.textChannel.sendEmbed(messagefunction1);
 }
 client.login(process.env.BOT_TOKEN);
