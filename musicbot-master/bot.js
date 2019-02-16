@@ -1,15 +1,11 @@
 const Discord = require('discord.js');
-const { Client, Util} = require('discord.js');
 const config = require("./config.json");
 const YouTube = require('simple-youtube-api');
 const developers = ["460606140666085378"]
 const ytdl = require('ytdl-core');
-
 const client = new Client({ disableEveryone: true});
-
 const youtube = new YouTube(config.GOOGLE_API_KEY);
 const PREFIX = config.prefix;
-
 const queue = new Map();
 
 client.on('warn', console.warn);
