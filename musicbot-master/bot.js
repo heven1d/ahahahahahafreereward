@@ -17,7 +17,7 @@ client.on('error', console.error);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`^play | MAK Music.`) //"http://twitch.tv/S-F"
+client.user.setGame("^play | MAK Music.") //"http://twitch.tv/S-F"
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
