@@ -179,7 +179,7 @@ Please enter a number between 1-10 on,a Song select!`)
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end('Stop command has been used!');
         var embedstop3 = new Discord.RichEmbed()
-            .setTitle(`Skipped.)
+            .setTitle(`Skipped.`)
             .setColor('#000000')
         return msg.channel.sendEmbed(embedstop3);
     }
