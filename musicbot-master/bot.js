@@ -15,16 +15,11 @@ client.on('warn', console.warn);
 
 client.on('error', console.error);
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame("^play | MAK Music.") //"http://twitch.tv/S-F"
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  
+client.on('ready', () => console.log('I am ready!'));
 
+client.user.setGame("^play | MAK Music.") //"http://twitch.tv/S-F"
+
+ 
 client.on('disconnect', () => console.log('I disconnected!'));
 
 client.on('reconnecting', () => console.log('I am disconnecting!'));
