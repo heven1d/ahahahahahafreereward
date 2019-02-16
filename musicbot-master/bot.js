@@ -70,7 +70,7 @@ client.on('message', async msg => { // eslint-disable-line
         const voiceChannel = msg.member.voiceChannel;
         if(!voiceChannel){
             var embedplay1 = new Discord.RichEmbed()
-                .setTitle(`Please Connect To A Voice Channel To Play Something!`)
+                .setTitle(`الرجاء دخول اي روم لبداً الأغنية.`)
                 .setColor('#000000')
             return msg.channel.sendEmbed(embedplay1);
         }
@@ -158,7 +158,7 @@ Please enter a number between 1-10 on,a Song select!`)
         }
         serverQueue.connection.dispatcher.end('Skip command has been used!');
         var embedskip3 = new Discord.RichEmbed()
-            .setTitle(`âڈ©Skippedًں‘چ`)
+            .setTitle(`Skipped`)
             .setColor('#000000')
         return msg.channel.sendEmbed(embedskip3);
     }   
@@ -179,7 +179,7 @@ Please enter a number between 1-10 on,a Song select!`)
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end('Stop command has been used!');
         var embedstop3 = new Discord.RichEmbed()
-            .setTitle(`âڈ©Skippedًں‘چ`)
+            .setTitle(`Skipped.)
             .setColor('#000000')
         return msg.channel.sendEmbed(embedstop3);
     }
@@ -317,21 +317,21 @@ Playing: ${serverQueue.songs[0].title}`)
         return msg.channel.sendEmbed(embedunmute3);
         }
     }
-    else if(msg.content.startsWith(`${PREFIX}helpmuwdwdwdssic`)){
+    else if(msg.content.startsWith(`${PREFIX}help`)){
         var embedhelp = new Discord.RichEmbed()
             .setTitle(`marcos-MusicBot Commands`)
             .addField("play [YouTube Link/Playlist]", "Usage: `!!play` Description: To play See The YouTube Linke And playlist.", false)
             .addField("play [Suchbegriff(e)]", "Usage: `!!play`<song name> Description: To play Music.", false)
-            .addField("skip", "Usage: `!!skip` Description: To skip music.", false)
-            .addField("stop", "Usage: `!!stop` Description: To Bot disconnected.", false)
-            .addField("song", "Usage: `!!song` Description: To Check The Current playing song.", false)
-            .addField("queue", "Usage: `!!queue` Description: To Check The Queue List.", false)
-            .addField("volume", "Usage: `!!volume` Description: To See Volume.", false)
+            .addField("skip", "Usage: `$skip` Description: To skip music.", false)
+            .addField("stop", "Usage: `$stop` Description: To Bot disconnected.", false)
+            .addField("song", "Usage: `$song` Description: To Check The Current playing song.", false)
+            .addField("queue", "Usage: `$queue` Description: To Check The Queue List.", false)
+            .addField("volume", "Usage: `$volume` Description: To See Volume.", false)
             .addField("volume [Wert]", "Usage: `!!volume` Description: To Changes the volume level to the specified value.", false)
-            .addField("pause", "Usage: `!!pause` Description: To pause The Current Playing Song.", false)
-            .addField("resume", "Usage: `!!resume` Description: To Resume The Paused Song.", false)
-            .addField("mute", "Usage: `!!mute` Description: To mute Bot.", false)
-            .addField("unmute", "Usage: `!!unmute` Description: To unmute Bot.", false)
+            .addField("pause", "Usage: `$pause` Description: To pause The Current Playing Song.", false)
+            .addField("resume", "Usage: `$resume` Description: To Resume The Paused Song.", false)
+            .addField("mute", "Usage: `$mute` Description: To mute Bot.", false)
+            .addField("unmute", "Usage: `$unmute` Description: To unmute Bot.", false)
             .setColor('#000000')
             .setThumbnail(client.user.avatarURL)
             return msg.channel.sendEmbed(embedhelp);
