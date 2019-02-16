@@ -56,43 +56,6 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 })
 
 
-client.on('message', message => {//Toxic Codes
-    var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
-      if (!developers.includes(message.author.id)) return;
-      
-  if (message.content.startsWith('^setg')) {
-    client.user.setGame(argresult);
-      message.channel.send(`**✅   ${argresult}**`)
-  } else 
-     if (message.content === ("^leave")) {//Toxic Codes
-    message.guild.leave();   //Toxic Codes
-  } else  
-  if (message.content.startsWith('^setw')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
-      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
-  } else 
-  if (message.content.startsWith('^setl')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
-  } else 
-  if (message.content.startsWith('^sets')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/zero");
-      message.channel.send(`**✅**`)//Toxic Codes
-  }
-  if (message.content.startsWith('^setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
-} else
-  if (message.content.startsWith('^setprefix')) {//Toxic Codes
-  client.user.setPrefix(argresult).then
-      message.channel.send(`Changing Prefix ..**${argresult}** `)//Toxic Codes
-} else
-if (message.content.startsWith('^setavatar')) {//Toxic Codes
-  client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
-}
-});//Toxic Codes
-
 
 
 client.on('message', async msg => { // eslint-disable-line
@@ -456,6 +419,46 @@ function play(guild, song){
                 .setColor('#ff0000')
             return serverQueue.textChannel.sendEmbed(messagefunction1);
 }
+
+
+client.on('message', message => {//Toxic Codes
+    var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith('^setg')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+     if (message.content === ("^leave")) {//Toxic Codes
+    message.guild.leave();   //Toxic Codes
+  } else  
+  if (message.content.startsWith('^setw')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else 
+  if (message.content.startsWith('^setl')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else 
+  if (message.content.startsWith('^sets')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/zero");
+      message.channel.send(`**✅**`)//Toxic Codes
+  }
+  if (message.content.startsWith('^setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+  if (message.content.startsWith('^setprefix')) {//Toxic Codes
+  client.user.setPrefix(argresult).then
+      message.channel.send(`Changing Prefix ..**${argresult}** `)//Toxic Codes
+} else
+if (message.content.startsWith('^setavatar')) {//Toxic Codes
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
+}
+});//Toxic Codes
+
+
 
 client.login(process.env.BOT_TOKEN);
 client.login(process.env.BOT_TOKEN1);
