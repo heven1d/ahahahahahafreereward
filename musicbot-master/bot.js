@@ -96,8 +96,18 @@ if (message.content.startsWith('^setavatar')) {//Toxic Codes
 });//Toxic Codes
 
 
+client.on('message', message => {
+     if (message.content === "^play") {
+message.channel.sendMessage("" + "please select song.");
+    }
+});     
 
 
+client.on('message', message => {
+     if (message.content === "^help") {
+message.channel.sendMessage("" + "this command not found, Is there something wrong?  contact ``wxý#0008``");
+    }
+}); 
 
 
 client.on('message', async msg => { // eslint-disable-line
