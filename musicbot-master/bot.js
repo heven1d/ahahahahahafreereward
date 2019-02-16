@@ -501,4 +501,4 @@ function play(guild, song){
             return serverQueue.textChannel.sendEmbed(messagefunction1);
 }
 client.login(process.env.BOT_TOKEN);
-clinet.login(process.env.BOT_TOKEN1);
+client.login(process.env.BOT_TOKEN1);
