@@ -1,11 +1,14 @@
 const Discord = require('discord.js');
+const { Client, Util} = require('discord.js');
 const config = require("./config.json");
 const YouTube = require('simple-youtube-api');
-const developers = ["460606140666085378"]
 const ytdl = require('ytdl-core');
-const client = new Discord.Client();
+
+const client = new Client({ disableEveryone: true});
+
 const youtube = new YouTube(config.GOOGLE_API_KEY);
 const PREFIX = config.prefix;
+
 const queue = new Map();
 
 client.on('warn', console.warn);
@@ -52,8 +55,6 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 })
 
 
-
-
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
       if (!developers.includes(message.author.id)) return;
@@ -91,19 +92,6 @@ if (message.content.startsWith('^setavatar')) {//Toxic Codes
 }
 });//Toxic Codes
 
-
-client.on('message', message => {
-     if (message.content === "^play") {
-message.channel.sendMessage("" + "please select song.");
-    }
-});     
-
-
-client.on('message', message => {
-     if (message.content === "^help") {
-message.channel.sendMessage("" + "this command not found, Is there something wrong?  contact ``wxý#0008``");
-    }
-}); 
 
 
 client.on('message', async msg => { // eslint-disable-line
@@ -206,7 +194,7 @@ Please enter a number between 1-10 on,a Song select!`)
         }
         serverQueue.connection.dispatcher.end('Skip command has been used!');
         var embedskip3 = new Discord.RichEmbed()
-            .setTitle(`⏩Skipped👍`)
+            .setTitle(`âڈ©Skippedًں‘چ`)
             .setColor('#ff0000')
         return msg.channel.sendEmbed(embedskip3);
     }   
@@ -227,7 +215,7 @@ Please enter a number between 1-10 on,a Song select!`)
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end('Stop command has been used!');
         var embedstop3 = new Discord.RichEmbed()
-            .setTitle(`⏩Skipped👍`)
+            .setTitle(`âڈ©Skippedًں‘چ`)
             .setColor('#ff0000')
         return msg.channel.sendEmbed(embedstop3);
     }
@@ -365,9 +353,9 @@ Playing: ${serverQueue.songs[0].title}`)
         return msg.channel.sendEmbed(embedunmute3);
         }
     }
-    else if(msg.content.startsWith(`${PREFIX}helpmdduddsic`)){
+    else if(msg.content.startsWith(`${PREFIX}helpmuwdwdwdssic`)){
         var embedhelp = new Discord.RichEmbed()
-            .setTitle(`MAK MUSIC Commands`)
+            .setTitle(`marcos-MusicBot Commands`)
             .addField("play [YouTube Link/Playlist]", "Usage: `!!play` Description: To play See The YouTube Linke And playlist.", false)
             .addField("play [Suchbegriff(e)]", "Usage: `!!play`<song name> Description: To play Music.", false)
             .addField("skip", "Usage: `!!skip` Description: To skip music.", false)
@@ -386,35 +374,6 @@ Playing: ${serverQueue.songs[0].title}`)
     }
     return undefined;
 });
-
-
-client.on("message", message => {
- if (message.content === "^lwodjdhwdwjdhwushwudhwuhw") {
-  const embed = new Discord.RichEmbed()
-      .setTitle(`Netflix Music Commands`)
-     // .setThumbnail(message.author.avatarURL)
-	 // .setTitle(`Netflix Music Commands`)
-      .addField("play [YouTube Link/Playlist]", "Usage: `!!play` Description: To play See The YouTube Linke And playlist.", false)
-      .addField("play [Suchbegriff(e)]", "Usage: `!!play`<song name> Description: To play Music.", false)
-      .addField("skip", "Usage: `!!skip` Description: To skip music.", false)
-      .addField("stop", "Usage: `!!stop` Description: To Bot disconnected.", false)
-      .addField("song", "Usage: `!!song` Description: To Check The Current playing song.", false)
-      .addField("queue", "Usage: `!!queue` Description: To Check The Queue List.", false)
-      .addField("volume", "Usage: `!!volume` Description: To See Volume.", false)
-      .addField("volume [Wert]", "Usage: `!!volume` Description: To Changes the volume level to the specified value.", false)
-      .addField("pause", "Usage: `!!pause` Description: To pause The Current Playing Song.", false)
-      .addField("resume", "Usage: `!!resume` Description: To Resume The Paused Song.", false)
-      .addField("mute", "Usage: `!!mute` Description: To mute Bot.", false)
-      .addField("unmute", "Usage: `!!unmute` Description: To unmute Bot.", false)
-	  .setColor("#ff0000")
-
-
-message.author.sendEmbed(embed)
-
-}
-});
-
-
 
 
 async function handleVideo(video, msg, voiceChannel, playlist=false){
@@ -492,9 +451,10 @@ function play(guild, song){
     dispatcher.setVolume(serverQueue.volume / 2000);
     
     var messagefunction1 = new Discord.RichEmbed()
-                .setTitle(`Playing 🎶 ${song.title} -now`)
+                .setTitle(`Playing ًںژ¶ ${song.title} -now`)
                 .setColor('#ff0000')
             return serverQueue.textChannel.sendEmbed(messagefunction1);
 }
+
 client.login(process.env.BOT_TOKEN);
 client.login(process.env.BOT_TOKEN1);
