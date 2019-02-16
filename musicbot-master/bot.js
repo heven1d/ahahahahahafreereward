@@ -16,6 +16,7 @@ client.on('warn', console.warn);
 client.on('error', console.error);
 
 client.on('ready', () => console.log('I am ready!'));
+client.user.setGame(`^play | MAK Music`) //    ,"http://twitch.tv/S-F" 
 
 client.on('disconnect', () => console.log('I disconnected!'));
 
@@ -28,7 +29,6 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 
 
   
-client.user.setGame(`^play | MAK Music`) //    ,"http://twitch.tv/S-F" 
   
  
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
