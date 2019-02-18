@@ -16,7 +16,13 @@ client.on('warn', console.warn);
 
 client.on('error', console.error);
 
-client.on('ready', () => console.log('I am ready!'));
+//client.on('ready', () => console.log('I am ready!'));
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setStatus('idle')
+ // client.user.setGame(`^help | for Netlflix Customer`) //    ,"http://twitch.tv/S-F"
+  console.log('')
+  console.log('')
 
 client.on('disconnect', () => console.log('I disconnected!'));
 
